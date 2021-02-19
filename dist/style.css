@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+font-size: 62.5%;
+/* height: -webkit-fill-available;  to make 100vh look good on mobile*/
+}
+
+body {
+height: 100vh;
+/* min-height: -webkit-fill-available; to make 100vh look good on mobile*/
+line-height: 1.5;
+font-size: 2rem;
+background: url('images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
+background-size: cover;
+font-family: Avenir;
+}
+
+img,
+picture {
+max-width: 100%;
+display: block;
+}
+
+input,
+button,
+textarea,
+select {
+font: inherit;
+color: inherit; 
+font: inherit; 
+letter-spacing: inherit;
+}
+
+h1{
+	font-family: 'Spectral';
+	font-size: 5rem;
+	text-align: center;
+	font-style:italic;
+	letter-spacing: 1rem;
+	padding-top: 2rem;
+	color: #ece0c5;
+	text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+}
+nav {
+	margin: 1rem auto;
+	width: 60%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+}
+
+nav button {
+	font-size: 3rem;
+	padding: 0rem 2rem;
+	background-color: #cc9543;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 0.5rem;
+}
+
+nav button:hover {
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+nav button:focus {
+	box-shadow: inset 0 0 10rem 10rem rgba(255, 255, 255, 0.4);
+}
