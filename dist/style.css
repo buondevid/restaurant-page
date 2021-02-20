@@ -8,16 +8,15 @@ box-sizing: border-box;
 
 html {
 font-size: 62.5%;
-/* height: -webkit-fill-available;  to make 100vh look good on mobile*/
 }
 
 body {
-height: 100vh;
-/* min-height: -webkit-fill-available; to make 100vh look good on mobile*/
+height: 100%;
 line-height: 1.5;
 font-size: 2rem;
 background: url('images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
 background-size: cover;
+background-attachment: fixed;
 font-family: Avenir;
 }
 
@@ -38,15 +37,20 @@ letter-spacing: inherit;
 }
 
 h1{
-	font-family: 'Spectral';
-	font-size: 5rem;
+	font-family: 'Dancing Script', cursive;
+	font-size: 8rem;
 	text-align: center;
 	font-style:italic;
 	letter-spacing: 1rem;
 	padding-top: 2rem;
-	color: #ece0c5;
-	text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+	color: #CB434C;
+	text-shadow:
+	-1px -1px 1rem #000,  
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 }
+
 nav {
 	margin: 1rem auto;
 	width: 60%;
@@ -63,13 +67,56 @@ nav button {
 	border: none;
 	outline: none;
 	border-radius: 0.5rem;
+	transition: transform 0.3s ease-out;
+
 }
 
 nav button:hover {
-	opacity: 0.8;
-	text-decoration: none;
+	transform: translateY(-0.5rem);
 }
 
 nav button:focus {
-	box-shadow: inset 0 0 10rem 10rem rgba(255, 255, 255, 0.4);
+	background-color: #f1c178;
+}
+
+.home {
+	color: #e1c79a;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 0.5rem;
+	border: 0.3rem solid #CB434C;
+	border-left: none;
+	border-right: none;
+	padding: 2rem;
+	font-size: 2.5rem;
+	width: 100%;
+	text-align: left;
+	margin: 10% auto;
+	backdrop-filter: blur(.5rem);
+	-webkit-backdrop-filter: blur(0.5rem);
+}
+
+.home span {
+	color: #cc9543
+}
+
+.home p:last-child span:last-child {
+	color: #CB434C;
+	font-weight: bold;
+}
+
+.signature {
+	padding: 1rem;
+	font-size: 1.5rem; 
+	white-space: pre;
+	opacity: 0.4;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.prova {
+	background-color: red;
 }
