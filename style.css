@@ -20,11 +20,7 @@ background-attachment: fixed;
 font-family: Avenir;
 }
 
-img,
-picture {
-max-width: 100%;
-display: block;
-}
+
 
 input,
 button,
@@ -42,8 +38,9 @@ h1{
 	text-align: center;
 	font-style:italic;
 	letter-spacing: 1rem;
-	padding-top: 2rem;
+	padding-top: 4rem;
 	color: #CB434C;
+	margin-top: 7rem;
 	text-shadow:
 	-1px -1px 1rem #000,  
 	1px -1px 0 #000,
@@ -52,7 +49,7 @@ h1{
 }
 
 nav {
-	margin: 1rem auto;
+	margin: 5rem auto;
 	width: 60%;
 	display: flex;
 	justify-content:space-evenly;
@@ -62,13 +59,14 @@ nav {
 nav button {
 	font-size: 3rem;
 	padding: 0rem 2rem;
-	background-color: #cc9543;
-	color: #fff;
-	border: none;
+	margin: 0 1rem;
+	background-color: #000000ab;
+	line-height: 1.1;
+	color: #cc9543;
+	border: 0.2rem solid #cc9543;
 	outline: none;
 	border-radius: 0.5rem;
 	transition: transform 0.3s ease-out;
-
 }
 
 nav button:hover {
@@ -76,23 +74,29 @@ nav button:hover {
 }
 
 nav button:focus {
-	background-color: #f1c178;
+	background-color: #fad7a4;
 }
 
 .home {
 	color: #e1c79a;
 	font-family: 'Dancing Script', cursive;
 	border-radius: 0.5rem;
-	border: 0.3rem solid #CB434C;
+	border: 0.3rem solid #cc9543;
 	border-left: none;
 	border-right: none;
 	padding: 2rem;
 	font-size: 2.5rem;
-	width: 100%;
+	max-width: 80%;
 	text-align: left;
-	margin: 10% auto;
-	backdrop-filter: blur(.5rem);
-	-webkit-backdrop-filter: blur(0.5rem);
+	margin: 8rem auto;
+	backdrop-filter: blur(1rem) opacity(0.5);
+	-webkit-backdrop-filter: blur(1rem);
+	transition: backdrop-filter 0.7s ease-out;
+}
+
+.home:hover {
+	backdrop-filter:blur(1rem) opacity(5);
+	-webkit-backdrop-filter:blur(1rem) opacity(5);
 }
 
 .home span {
@@ -104,19 +108,35 @@ nav button:focus {
 	font-weight: bold;
 }
 
-.signature {
-	padding: 1rem;
-	font-size: 1.5rem; 
-	white-space: pre;
-	opacity: 0.4;
-	color: #fff;
-	text-align: center;
+#old-woman-chef {
+	border-radius: 50%;
+	border-left: 0.3rem solid #cc9543;
+	border-top: 0.3rem solid #cc9543;
+	height: 15rem;
+	width: 15rem;
+	object-fit: none;
+	object-position: 40% 40%;
+	margin: auto;
 	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.signature {
+	position: absolute;
+	padding: 1rem;
+	font-size: 1.5rem;
+	white-space: pre;
+	opacity: 0.8;
+	color: #CB434C;
+	text-align: center;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-.prova {
-	background-color: red;
+@media (max-width: 550px) {
+	html {
+		font-size: 50%;
+	}
 }
