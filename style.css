@@ -7,7 +7,10 @@ box-sizing: border-box;
 }
 
 html {
+position: relative; /* to place my signature absolutely bottom */
+min-height: 100%; /* to place my signature absolutely bottom */
 font-size: 62.5%;
+overflow-y: scroll; /* avoid page resizing when vertical scrollbar kicks in */
 }
 
 body {
@@ -20,16 +23,14 @@ background-attachment: fixed;
 font-family: Avenir;
 }
 
-
-
 input,
 button,
 textarea,
 select {
 font: inherit;
 color: inherit; 
-font: inherit; 
 letter-spacing: inherit;
+cursor: pointer;
 }
 
 h1{
@@ -38,9 +39,11 @@ h1{
 	text-align: center;
 	font-style:italic;
 	letter-spacing: 1rem;
-	padding-top: 4rem;
-	color: #CB434C;
-	margin-top: 7rem;
+	color: #e4c4c6;
+	margin: 7rem auto 0;
+	font-weight: bold;
+	background-color: #000000ab;
+	width: 100%;
 	text-shadow:
 	-1px -1px 1rem #000,  
 	1px -1px 0 #000,
@@ -57,11 +60,12 @@ nav {
 }
 
 nav button {
-	font-size: 3rem;
-	padding: 0rem 2rem;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 0.5rem 3rem;
 	margin: 0 1rem;
 	background-color: #000000ab;
-	line-height: 1.1;
+	line-height: 1;
 	color: #cc9543;
 	border: 0.2rem solid #cc9543;
 	outline: none;
@@ -71,10 +75,6 @@ nav button {
 
 nav button:hover {
 	transform: translateY(-0.5rem);
-}
-
-nav button:focus {
-	background-color: #fad7a4;
 }
 
 .home {
@@ -91,20 +91,19 @@ nav button:focus {
 	margin: 8rem auto;
 	backdrop-filter: blur(1rem) opacity(0.5);
 	-webkit-backdrop-filter: blur(1rem);
-	transition: backdrop-filter 0.7s ease-out;
+	transition: background-color 0.3s ease-out;
 }
 
 .home:hover {
-	backdrop-filter:blur(1rem) opacity(5);
-	-webkit-backdrop-filter:blur(1rem) opacity(5);
+	background-color: rgba(0, 0, 0, 0.692);
 }
 
 .home span {
 	color: #cc9543
 }
 
-.home p:last-child span:last-child {
-	color: #CB434C;
+.home p:last-of-type span:last-child { /* last of type to select last element of certain type */
+	color: #e4c4c6;
 	font-weight: bold;
 }
 
@@ -122,21 +121,75 @@ nav button:focus {
 	transform: translateX(-50%);
 }
 
+.menu {
+	color: #e1c79a;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 0.5rem;
+	border: 0.3rem solid #cc9543;
+	border-left: none;
+	border-right: none;
+	padding: 2rem;
+	font-size: 2.5rem;
+	max-width: 60%;
+	text-align: left;
+	margin: 8rem auto;
+	backdrop-filter: blur(2rem);
+	-webkit-backdrop-filter: blur(2rem);
+	transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
+	text-align: center;
+}
+
+.menu ul {
+	list-style-type: none;
+}
+
+.menu h2{
+	position: relative;
+	margin-top: 3rem;
+	color: #cc9543;
+}
+
+.menu h2::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 0.3rem;
+	background-color: #cc9543;
+	z-index: -1;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.menu h3 {
+	line-height: 1.2;
+	margin-top: 1rem;
+}
+
+.menu p{
+	line-height: 1.2;
+}
+
 .signature {
 	position: absolute;
+	display: inline-block;
 	padding: 1rem;
 	font-size: 1.5rem;
 	white-space: pre;
-	opacity: 0.8;
-	color: #CB434C;
-	text-align: center;
+	color: #e4c4c6;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
+.activeButton {
+	background-color: #cc9543;
+	color: black;
+}
+
 @media (max-width: 550px) {
 	html {
-		font-size: 50%;
+		font-size: 45%;
 	}
 }
