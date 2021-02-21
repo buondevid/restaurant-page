@@ -19,6 +19,4 @@ export default function skeletonLoad() {
 	</main>
 	<div class='signature'><p>made with 🧠  by <a style='font-weight:bold; text-decoration: none; color:#CB434C;' href='https://github.com/buondevid' target="_blank" rel='noopener noreferrer'>buondevid</a></p></div>
 `;
-
-	document.querySelector('.home').classList.add('prova');
 }
