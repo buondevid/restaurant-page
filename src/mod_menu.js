@@ -2,7 +2,7 @@ export default function menuLoad() {
 	const main = document.querySelector('main');
 
 	main.innerHTML = `
-				<section class='menu'>
+				<section class='menu fade'>
 				<ul>
 					<h2>Starters</h2>
 					<li>

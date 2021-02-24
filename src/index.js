@@ -5,6 +5,7 @@ import contactLoad from './mod_contact';
 
 skeletonLoad(); // render title,nav and signature
 homeLoad(); // render home
+setTimeout(fadeIn, 1);
 setActiveButton(document.querySelector('button'));
 
 function clearButtonClasses() {
@@ -16,6 +17,10 @@ function setActiveButton(target) {
 	target.classList.add('activeButton');
 }
 
+function fadeIn() {
+	document.querySelector('section').classList.remove('fade');
+}
+
 (function switchTabs() {
 	const nav = document.querySelector('nav');
 	nav.addEventListener('click', (e) => {
@@ -25,14 +30,17 @@ function setActiveButton(target) {
 			case 'Home':
 				setActiveButton(e.target);
 				homeLoad();
+				setTimeout(fadeIn, 100);
 				break;
 			case 'Menu':
 				setActiveButton(e.target);
 				menuLoad();
+				setTimeout(fadeIn, 100);
 				break;
 			case 'Contact':
 				setActiveButton(e.target);
 				contactLoad();
+				setTimeout(fadeIn, 100);
 				break;
 			default:
 			}

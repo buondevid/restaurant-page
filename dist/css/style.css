@@ -21,7 +21,7 @@ body {
   line-height: 1.5;
   font-size: 2rem;
   background: url("../images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg");
-  background-size: cover;
+  /* background-size: cover; it bugs on iOS */
   background-attachment: fixed;
   font-family: Avenir;
 }
@@ -96,7 +96,7 @@ nav button[class=activeButton]:hover {
   margin: 8rem auto;
   -webkit-backdrop-filter: blur(1.1rem);
           backdrop-filter: blur(1.1rem);
-  transition: background-color 0.3s ease-out;
+  transition: all 0.3s ease-out, opacity 1s ease;
 }
 
 .home:hover {
@@ -143,7 +143,9 @@ nav button[class=activeButton]:hover {
   margin: 8rem auto;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
-  transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
+  transition: opacity 1s ease, -webkit-backdrop-filter 0.7s ease-out;
+  transition: backdrop-filter 0.7s ease-out, opacity 1s ease;
+  transition: backdrop-filter 0.7s ease-out, opacity 1s ease, -webkit-backdrop-filter 0.7s ease-out;
 }
 
 .menu ul {
@@ -155,7 +157,6 @@ nav button[class=activeButton]:hover {
 
 .menu h2 {
   position: relative;
-  margin-top: 3rem;
   color: #cc9543;
   letter-spacing: 0.5rem;
 }
@@ -196,9 +197,9 @@ nav button[class=activeButton]:hover {
   margin: 8rem auto;
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
-  transition: -webkit-backdrop-filter 0.7s ease-out;
-  transition: backdrop-filter 0.7s ease-out;
-  transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
+  transition: opacity 1s ease, -webkit-backdrop-filter 0.7s ease-out;
+  transition: backdrop-filter 0.7s ease-out, opacity 1s ease;
+  transition: backdrop-filter 0.7s ease-out, opacity 1s ease, -webkit-backdrop-filter 0.7s ease-out;
 }
 .contact .map {
   margin-top: 3rem;
@@ -254,7 +255,7 @@ nav button[class=activeButton]:hover {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  text-shadow: 0 0 3rem #e7cacc;
+  text-shadow: 0 0 1rem #3a1b1d;
 }
 
 .activeButton {
@@ -263,8 +264,16 @@ nav button[class=activeButton]:hover {
   color: black;
 }
 
+.fade {
+  opacity: 0;
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 45%;
+  }
+
+  .contact .map iframe {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@ export default function contactLoad() {
 	const main = document.querySelector('main');
 
 	main.innerHTML = `
-		<section class="contact">
+		<section class="contact fade">
 			<h2>Contact us!</h2>
 			<div class="map">
 				<iframe
