@@ -3,8 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -38,7 +37,7 @@ select {
 }
 
 h1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 8rem;
   text-align: center;
   font-style: italic;
@@ -48,21 +47,15 @@ h1 {
   font-weight: bold;
   background-color: #000000ab;
   width: 100%;
-  text-shadow: -1px -1px 1rem #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 1rem #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 nav {
   margin: 5rem auto;
   width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 nav button {
@@ -76,20 +69,22 @@ nav button {
   border: 0.2rem solid #cc9543;
   outline: none;
   border-radius: 0.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 nav button:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
+  border-color: #e4c4c6;
+  color: #e4c4c6;
+}
+
+nav button[class=activeButton]:hover {
+  color: black;
 }
 
 .home {
   color: #e1c79a;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   border-radius: 0.5rem;
   border: 0.3rem solid #cc9543;
   border-left: none;
@@ -99,9 +94,8 @@ nav button:hover {
   max-width: 80%;
   text-align: left;
   margin: 8rem auto;
-  backdrop-filter: blur(1rem) opacity(0.5);
-  -webkit-backdrop-filter: blur(1rem);
-  -webkit-transition: background-color 0.3s ease-out;
+  -webkit-backdrop-filter: blur(1.1rem);
+          backdrop-filter: blur(1.1rem);
   transition: background-color 0.3s ease-out;
 }
 
@@ -132,13 +126,12 @@ nav button:hover {
   margin: auto;
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .menu {
   color: #e1c79a;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   border-radius: 0.5rem;
   border: 0.3rem solid #cc9543;
   border-left: none;
@@ -146,26 +139,29 @@ nav button:hover {
   padding: 2rem;
   font-size: 2.5rem;
   max-width: 60%;
-  text-align: left;
-  margin: 8rem auto;
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
-  transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
   text-align: center;
+  margin: 8rem auto;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
 }
 
 .menu ul {
   list-style-type: none;
+}
+.menu ul li:last-child {
+  margin-bottom: 3rem;
 }
 
 .menu h2 {
   position: relative;
   margin-top: 3rem;
   color: #cc9543;
+  letter-spacing: 0.5rem;
 }
 
 .menu h2::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 50%;
@@ -174,8 +170,7 @@ nav button:hover {
   z-index: -1;
   top: 80%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .menu h3 {
@@ -187,6 +182,68 @@ nav button:hover {
   line-height: 1.2;
 }
 
+.contact {
+  color: #e1c79a;
+  font-family: "Dancing Script", cursive;
+  border-radius: 0.5rem;
+  border: 0.3rem solid #cc9543;
+  border-left: none;
+  border-right: none;
+  padding: 2rem;
+  font-size: 2.5rem;
+  max-width: 60%;
+  text-align: center;
+  margin: 8rem auto;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  transition: -webkit-backdrop-filter 0.7s ease-out;
+  transition: backdrop-filter 0.7s ease-out;
+  transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
+}
+.contact .map {
+  margin-top: 3rem;
+}
+.contact .map iframe {
+  width: 60%;
+  aspect-ratio: 1/1;
+}
+.contact .map p {
+  text-align: center;
+}
+.contact h2 {
+  color: #cc9543;
+}
+.contact p {
+  font-family: avenir;
+  font-size: 2rem;
+  text-align: left;
+}
+.contact p i {
+  margin: 0 1rem;
+  color: #cc9543;
+}
+.contact-links {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+.contact-links p {
+  margin: 1rem 0;
+  text-align: center;
+}
+.contact .p-goodbye {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+.contact a {
+  color: #cc9543;
+}
+
 .signature {
   position: absolute;
   display: inline-block;
@@ -196,18 +253,18 @@ nav button:hover {
   color: #e4c4c6;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-shadow: 0 0 3rem #e7cacc;
 }
 
 .activeButton {
-  background-color: #cc9543;
+  border-color: #e4c4c6;
+  background-color: #e4c4c6;
   color: black;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   html {
     font-size: 45%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

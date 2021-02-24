@@ -1,36 +1,42 @@
+$accent-color: #e4c4c6;
+$primary-color: #cc9543;
+$secondary-color: #e1c79a;
+
+@use 'sass:color';
+
 *,
 *::before,
 *::after {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-position: relative; /* to place my signature absolutely bottom */
-min-height: 100%; /* to place my signature absolutely bottom */
-font-size: 62.5%;
-overflow-y: scroll; /* avoid page resizing when vertical scrollbar kicks in */
+	position: relative; /* to place my signature absolutely bottom */
+	min-height: 100%; /* to place my signature absolutely bottom */
+	font-size: 62.5%;
+	overflow-y: scroll; /* avoid page resizing when vertical scrollbar kicks in */
 }
 
 body {
-height: 100%;
-line-height: 1.5;
-font-size: 2rem;
-background: url('images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
-background-size: cover;
-background-attachment: fixed;
-font-family: Avenir;
+	height: 100%;
+	line-height: 1.5;
+	font-size: 2rem;
+	background: url('../images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Avenir;
 }
 
 input,
 button,
 textarea,
 select {
-font: inherit;
-color: inherit; 
-letter-spacing: inherit;
-cursor: pointer;
+	font: inherit;
+	color: inherit; 
+	letter-spacing: inherit;
+	cursor: pointer;
 }
 
 h1{
@@ -39,7 +45,7 @@ h1{
 	text-align: center;
 	font-style:italic;
 	letter-spacing: 1rem;
-	color: #e4c4c6;
+	color: $accent-color;
 	margin: 7rem auto 0;
 	font-weight: bold;
 	background-color: #000000ab;
@@ -66,8 +72,8 @@ nav button {
 	margin: 0 1rem;
 	background-color: #000000ab;
 	line-height: 1;
-	color: #cc9543;
-	border: 0.2rem solid #cc9543;
+	color: $primary-color;
+	border: 0.2rem solid $primary-color;
 	outline: none;
 	border-radius: 0.5rem;
 	transition: transform 0.3s ease-out;
@@ -75,13 +81,19 @@ nav button {
 
 nav button:hover {
 	transform: translateY(-0.5rem);
+	border-color: $accent-color;
+	color: $accent-color;
+}
+
+nav button[class='activeButton']:hover {
+	color:black;
 }
 
 .home {
-	color: #e1c79a;
+	color: $secondary-color;
 	font-family: 'Dancing Script', cursive;
 	border-radius: 0.5rem;
-	border: 0.3rem solid #cc9543;
+	border: 0.3rem solid $primary-color;
 	border-left: none;
 	border-right: none;
 	padding: 2rem;
@@ -89,8 +101,7 @@ nav button:hover {
 	max-width: 80%;
 	text-align: left;
 	margin: 8rem auto;
-	backdrop-filter: blur(1rem) opacity(0.5);
-	-webkit-backdrop-filter: blur(1rem);
+	backdrop-filter: blur(1.1rem);
 	transition: background-color 0.3s ease-out;
 }
 
@@ -99,18 +110,18 @@ nav button:hover {
 }
 
 .home span {
-	color: #cc9543
+	color: $primary-color
 }
 
 .home p:last-of-type span:last-child { /* last of type to select last element of certain type */
-	color: #e4c4c6;
+	color: $accent-color;
 	font-weight: bold;
 }
 
 #old-woman-chef {
 	border-radius: 50%;
-	border-left: 0.3rem solid #cc9543;
-	border-top: 0.3rem solid #cc9543;
+	border-left: 0.3rem solid $primary-color;
+	border-top: 0.3rem solid $primary-color;
 	height: 15rem;
 	width: 15rem;
 	object-fit: none;
@@ -122,31 +133,34 @@ nav button:hover {
 }
 
 .menu {
-	color: #e1c79a;
+	color: $secondary-color;
 	font-family: 'Dancing Script', cursive;
 	border-radius: 0.5rem;
-	border: 0.3rem solid #cc9543;
+	border: 0.3rem solid $primary-color;
 	border-left: none;
 	border-right: none;
 	padding: 2rem;
 	font-size: 2.5rem;
 	max-width: 60%;
-	text-align: left;
+	text-align: center;
 	margin: 8rem auto;
 	backdrop-filter: blur(2rem);
-	-webkit-backdrop-filter: blur(2rem);
 	transition: backdrop-filter 0.7s ease-out, -webkit-backdrop-filter 0.7s ease-out;
-	text-align: center;
 }
 
 .menu ul {
 	list-style-type: none;
+
+	li:last-child {
+		margin-bottom: 3rem;
+	}
 }
 
 .menu h2{
 	position: relative;
 	margin-top: 3rem;
-	color: #cc9543;
+	color: $primary-color;
+	letter-spacing: 0.5rem;
 }
 
 .menu h2::before {
@@ -155,7 +169,7 @@ nav button:hover {
 	display: block;
 	width: 50%;
 	height: 0.3rem;
-	background-color: #cc9543;
+	background-color: $primary-color;
 	z-index: -1;
 	top: 80%;
 	left: 50%;
@@ -171,24 +185,95 @@ nav button:hover {
 	line-height: 1.2;
 }
 
+.contact {
+	color: $secondary-color;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 0.5rem;
+	border: 0.3rem solid $primary-color;
+	border-left: none;
+	border-right: none;
+	padding: 2rem;
+	font-size: 2.5rem;
+	max-width: 60%;
+	text-align: center;
+	margin: 8rem auto;
+	backdrop-filter: blur(2rem);
+	transition: backdrop-filter 0.7s ease-out;
+
+	.map {
+		margin-top: 3rem;
+
+		iframe {
+			width: 60%;
+			aspect-ratio: 1/1;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+
+	h2 {
+		color: $primary-color;
+	}
+
+	p {
+		font-family: avenir;
+		font-size: 2rem;
+		text-align: left;
+
+		i {
+			margin: 0 1rem;
+			color: $primary-color
+		}
+	}
+
+	&-links {
+		margin: 3rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-shrink: 1;
+
+		p {
+			margin: 1rem 0;
+			text-align: center;
+		}
+	}
+
+	.p-goodbye {
+		text-align: center;
+		font-family: 'Dancing Script', cursive;
+		letter-spacing: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	a {
+		color: $primary-color;
+	}
+}
+
 .signature {
 	position: absolute;
 	display: inline-block;
 	padding: 1rem;
 	font-size: 1.5rem;
 	white-space: pre;
-	color: #e4c4c6;
+	color: $accent-color;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+	text-shadow: 0 0 3rem color.scale($accent-color, $lightness: 10%)
 }
 
 .activeButton {
-	background-color: #cc9543;
+	border-color: $accent-color;
+	background-color: $accent-color;
 	color: black;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
 	html {
 		font-size: 45%;
 	}

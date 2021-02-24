@@ -1,9 +1,11 @@
-import skeletonLoad from './mod_page-load';
+import skeletonLoad from './mod_skeleton';
 import homeLoad from './mod_home';
 import menuLoad from './mod_menu';
+import contactLoad from './mod_contact';
 
 skeletonLoad(); // render title,nav and signature
 homeLoad(); // render home
+setActiveButton(document.querySelector('button'));
 
 function clearButtonClasses() {
 	const buttons = document.querySelectorAll('button');
@@ -28,13 +30,12 @@ function setActiveButton(target) {
 				setActiveButton(e.target);
 				menuLoad();
 				break;
-			// case 'Contact':
-			// 	contactLoad();
-			// 	break;
+			case 'Contact':
+				setActiveButton(e.target);
+				contactLoad();
+				break;
 			default:
-				console.log('nothing here');
 			}
 		}
 	});
 }());
-// menuLoad(); // render menu
