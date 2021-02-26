@@ -18,4 +18,5 @@ module.exports = {
 		'no-underscore-dangle': ['off'],
 		'no-use-before-define': ['warn', { functions: true, classes: true }],
 	},
+	ignorePatterns: ['dist/*'],
 };
