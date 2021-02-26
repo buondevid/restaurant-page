@@ -32,6 +32,7 @@ The goal of the project was to meet Webpack and start using it. In the end, I de
 - Improved _responsiveness_ programming
 - Deepened DOM manipulations
 - Increased DRY and code efficiency
+- Advanced Markdown manipulation and workarounds
 
 ## What could be improved :mag: 
 
