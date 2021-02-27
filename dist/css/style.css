@@ -18,13 +18,13 @@
 }
 
 html {
+  /* to place my signature absolutely bottom */
   position: relative;
   /* to place my signature absolutely bottom */
   min-height: 100%;
-  /* to place my signature absolutely bottom */
   font-size: 62.5%;
-  overflow-y: scroll;
   /* avoid page resizing when vertical scrollbar kicks in */
+  overflow-y: scroll;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
   line-height: 1.5;
   font-size: 2rem;
   background: url("../images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg");
-  /* background-size: cover; it bugs on iOS */
+  /* background-size: cover; it bugs on iOS, hence removed */
   background-attachment: fixed;
   font-family: Avenir;
 }
@@ -98,6 +98,7 @@ nav button[class=activeButton]:hover {
   -webkit-backdrop-filter: blur(1.1rem);
           backdrop-filter: blur(1.1rem);
   transition: all 0.3s ease-out, opacity 1s ease;
+  /* last of type to select last element of certain type */
 }
 .home:hover {
   background-color: rgba(0, 0, 0, 0.692);
@@ -106,7 +107,6 @@ nav button[class=activeButton]:hover {
   color: #cc9543;
 }
 .home p:last-of-type span:last-child {
-  /* last of type to select last element of certain type */
   color: #e4c4c6;
   font-weight: bold;
 }

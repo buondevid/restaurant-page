@@ -17,8 +17,8 @@
 		color: variables.$primary-color;
 	}
 
+	/* last of type to select last element of certain type */
 	p:last-of-type span:last-child {
-		/* last of type to select last element of certain type */
 		color: variables.$accent-color;
 		font-weight: bold;
 	}

@@ -7,10 +7,13 @@
 }
 
 html {
-	position: relative; /* to place my signature absolutely bottom */
-	min-height: 100%; /* to place my signature absolutely bottom */
+	/* to place my signature absolutely bottom */
+	position: relative;
+	/* to place my signature absolutely bottom */
+	min-height: 100%;
 	font-size: 62.5%;
-	overflow-y: scroll; /* avoid page resizing when vertical scrollbar kicks in */
+	/* avoid page resizing when vertical scrollbar kicks in */
+	overflow-y: scroll; 
 }
 
 body {
@@ -18,7 +21,7 @@ body {
 	line-height: 1.5;
 	font-size: 2rem;
 	background: url('../images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
-	/* background-size: cover; it bugs on iOS */
+	/* background-size: cover; it bugs on iOS, hence removed */
 	background-attachment: fixed;
 	font-family: Avenir;
 }
