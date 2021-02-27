@@ -1,0 +1,45 @@
+@use 'variables';
+
+.menu {
+	@extend %card;
+	max-width: 60%;
+	text-align: center;
+	margin: 8rem auto;
+	backdrop-filter: blur(2rem);
+	transition: backdrop-filter 0.7s ease-out, opacity 1s ease;
+
+	ul {
+		list-style-type: none;
+	}
+
+	li:last-child {
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		position: relative;
+		color: variables.$primary-color;
+		letter-spacing: 0.5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 50%;
+			height: 0.3rem;
+			background-color: variables.$primary-color;
+			top: 80%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	h3 {
+		line-height: 1.2;
+		margin-top: 1rem;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+}

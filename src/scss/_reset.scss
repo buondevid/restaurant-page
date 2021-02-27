@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	position: relative; /* to place my signature absolutely bottom */
+	min-height: 100%; /* to place my signature absolutely bottom */
+	font-size: 62.5%;
+	overflow-y: scroll; /* avoid page resizing when vertical scrollbar kicks in */
+}
+
+body {
+	height: 100%;
+	line-height: 1.5;
+	font-size: 2rem;
+	background: url('../images/giuseppe-argenziano-6rnN-G_N5Ok-unsplash.jpg');
+	/* background-size: cover; it bugs on iOS */
+	background-attachment: fixed;
+	font-family: Avenir;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+	letter-spacing: inherit;
+	cursor: pointer;
+}

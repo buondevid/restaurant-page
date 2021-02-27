@@ -1,0 +1,63 @@
+@use 'variables';
+
+.contact {
+	@extend %card;
+	max-width: 60%;
+	text-align: center;
+	margin: 8rem auto;
+	backdrop-filter: blur(2rem);
+	transition: backdrop-filter 0.7s ease-out, opacity 1s ease;
+
+	.map {
+		margin-top: 3rem;
+
+		p {
+			text-align: center;
+		}
+	}
+
+	iframe {
+		width: 60%;
+		aspect-ratio: 1/1;
+	}
+
+	h2 {
+		color: variables.$primary-color;
+	}
+
+	p {
+		font-family: avenir;
+		font-size: 2rem;
+		text-align: left;
+
+		i {
+			margin: 0 1rem;
+			color: variables.$primary-color;
+		}
+	}
+
+	&-links {
+		margin: 3rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-shrink: 1;
+
+		p {
+			margin: 1rem 0;
+			text-align: center;
+		}
+	}
+
+	.p-goodbye {
+		text-align: center;
+		font-family: 'Dancing Script', cursive;
+		letter-spacing: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	a {
+		color: variables.$primary-color;
+	}
+}

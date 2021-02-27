@@ -1,3 +1,14 @@
+.contact, .menu, .home {
+  color: #e1c79a;
+  font-family: "Dancing Script", cursive;
+  border-radius: 0.5rem;
+  border: 0.3rem solid #cc9543;
+  border-left: none;
+  border-right: none;
+  padding: 2rem;
+  font-size: 2.5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -57,7 +68,6 @@ nav {
   justify-content: space-evenly;
   align-items: center;
 }
-
 nav button {
   font-size: 2rem;
   font-weight: bold;
@@ -71,42 +81,30 @@ nav button {
   border-radius: 0.5rem;
   transition: transform 0.3s ease-out;
 }
-
 nav button:hover {
   transform: translateY(-0.5rem);
   border-color: #e4c4c6;
   color: #e4c4c6;
 }
-
 nav button[class=activeButton]:hover {
   color: black;
 }
 
 .home {
-  color: #e1c79a;
-  font-family: "Dancing Script", cursive;
-  border-radius: 0.5rem;
-  border: 0.3rem solid #cc9543;
-  border-left: none;
-  border-right: none;
-  padding: 2rem;
-  font-size: 2.5rem;
-  max-width: 80%;
+  width: 90%;
+  max-width: 80rem;
   text-align: left;
   margin: 8rem auto;
   -webkit-backdrop-filter: blur(1.1rem);
           backdrop-filter: blur(1.1rem);
   transition: all 0.3s ease-out, opacity 1s ease;
 }
-
 .home:hover {
   background-color: rgba(0, 0, 0, 0.692);
 }
-
 .home span {
   color: #cc9543;
 }
-
 .home p:last-of-type span:last-child {
   /* last of type to select last element of certain type */
   color: #e4c4c6;
@@ -130,14 +128,6 @@ nav button[class=activeButton]:hover {
 }
 
 .menu {
-  color: #e1c79a;
-  font-family: "Dancing Script", cursive;
-  border-radius: 0.5rem;
-  border: 0.3rem solid #cc9543;
-  border-left: none;
-  border-right: none;
-  padding: 2rem;
-  font-size: 2.5rem;
   max-width: 60%;
   text-align: center;
   margin: 8rem auto;
@@ -147,20 +137,17 @@ nav button[class=activeButton]:hover {
   transition: backdrop-filter 0.7s ease-out, opacity 1s ease;
   transition: backdrop-filter 0.7s ease-out, opacity 1s ease, -webkit-backdrop-filter 0.7s ease-out;
 }
-
 .menu ul {
   list-style-type: none;
 }
-.menu ul li:last-child {
+.menu li:last-child {
   margin-bottom: 3rem;
 }
-
 .menu h2 {
   position: relative;
   color: #cc9543;
   letter-spacing: 0.5rem;
 }
-
 .menu h2::before {
   content: "";
   position: absolute;
@@ -168,30 +155,19 @@ nav button[class=activeButton]:hover {
   width: 50%;
   height: 0.3rem;
   background-color: #cc9543;
-  z-index: -1;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .menu h3 {
   line-height: 1.2;
   margin-top: 1rem;
 }
-
 .menu p {
   line-height: 1.2;
 }
 
 .contact {
-  color: #e1c79a;
-  font-family: "Dancing Script", cursive;
-  border-radius: 0.5rem;
-  border: 0.3rem solid #cc9543;
-  border-left: none;
-  border-right: none;
-  padding: 2rem;
-  font-size: 2.5rem;
   max-width: 60%;
   text-align: center;
   margin: 8rem auto;
@@ -204,12 +180,12 @@ nav button[class=activeButton]:hover {
 .contact .map {
   margin-top: 3rem;
 }
-.contact .map iframe {
-  width: 60%;
-  aspect-ratio: 1/1;
-}
 .contact .map p {
   text-align: center;
+}
+.contact iframe {
+  width: 60%;
+  aspect-ratio: 1/1;
 }
 .contact h2 {
   color: #cc9543;
@@ -273,7 +249,7 @@ nav button[class=activeButton]:hover {
     font-size: 45%;
   }
 
-  .contact .map iframe {
+  .contact iframe {
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

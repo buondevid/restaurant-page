@@ -1,0 +1,14 @@
+$accent-color: #e4c4c6;
+$primary-color: #cc9543;
+$secondary-color: #e1c79a;
+
+%card {
+	color: $secondary-color;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 0.5rem;
+	border: 0.3rem solid $primary-color;
+	border-left: none;
+	border-right: none;
+	padding: 2rem;
+	font-size: 2.5rem;
+}

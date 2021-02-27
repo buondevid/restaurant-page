@@ -3,7 +3,7 @@ import homeLoad from './mod_home';
 import menuLoad from './mod_menu';
 import contactLoad from './mod_contact';
 
-skeletonLoad(); // render title,nav and signature
+skeletonLoad(); // render title, nav and signature
 homeLoad(); // render home
 setTimeout(fadeIn, 1);
 setActiveButton(document.querySelector('button'));

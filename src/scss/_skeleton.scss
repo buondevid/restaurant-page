@@ -1,0 +1,48 @@
+
+@use 'variables';
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 8rem;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 1rem;
+	color: variables.$accent-color;
+	margin: 7rem auto 0;
+	font-weight: bold;
+	background-color: #000000ab;
+	width: 100%;
+	text-shadow: -1px -1px 1rem #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+nav {
+	margin: 5rem auto;
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	button {
+		font-size: 2rem;
+		font-weight: bold;
+		padding: 0.5rem 3rem;
+		margin: 0 1rem;
+		background-color: #000000ab;
+		line-height: 1;
+		color: variables.$primary-color;
+		border: 0.2rem solid variables.$primary-color;
+		outline: none;
+		border-radius: 0.5rem;
+		transition: transform 0.3s ease-out;
+
+		&:hover {
+			transform: translateY(-0.5rem);
+			border-color: variables.$accent-color;
+			color: variables.$accent-color;
+		}
+
+		&[class='activeButton']:hover {
+			color: black;
+		}
+	}
+}
